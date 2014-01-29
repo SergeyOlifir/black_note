@@ -1,0 +1,246 @@
+grid-block, .main, .post, .comments li, .comment-form { 
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    background: #eee;
+    color: #666666; 
+}
+.navbar { 
+    margin-bottom: 10px;
+    background-image: linear-gradient(#484E55, #3A3F44 60%, #313539);
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    filter: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    min-height: 42px;
+} 
+
+.navbar .navbar-inner {
+    border-radius: 0px 0px 3px 3px; 
+}
+
+#spinner { height: 300px } 
+
+.post {
+    *zoom: 1;
+    -webkit-transition: all 300ms 0ms; 
+    -webkit-transition-delay: ease-in; 
+    -moz-transition: all 300ms 0ms ease-in; 
+    -o-transition: all 300ms 0ms ease-in; 
+    transition: all 300ms 0ms ease-in; 
+    position: relative;
+    opacity: 1;
+}
+.post:before, .post:after {
+content: "";
+display: table; }
+.post:after { clear: both } .post.invisible { opacity: 0 } .post .upvote {
+display: block; margin: 7px 12px 0 0; float: left;
+}
+.post .post-content { float: left } .post .post-content h3 {
+margin: 0; line-height: 1.4; font-size: 18px;
+}
+.post .post-content h3 a {
+display: inline-block;
+margin-right: 5px; }
+.post .post-content h3 span { font-weight: normal; font-size: 14px;
+display: inline-block; color: #aaaaaa;
+}
+.post .post-content p { margin: 0 }
+.post .discuss { display: block;
+float: right;
+margin-top: 7px; }
+.comments { list-style-type: none; margin: 0;
+}
+.comments li h4 {
+font-size: 16px;
+margin: 0; }
+.comments li h4 .date { font-size: 12px;
+font-weight: normal; }
+.comments li h4 a { font-size: 12px } .comments li p:last-child { margin-bottom: 0 }
+
+.load-more {
+display: block;
+border-radius: 3px;
+background: rgba(0, 0, 0, 0.05); text-align: center;
+height: 60px;
+line-height: 60px; margin-bottom: 10px;
+}
+.load-more:hover {
+text-decoration: none;
+background: rgba(0, 0, 0, 0.1); }
+
+
+html {
+    min-width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: #272B30;
+    background-size: 100%;
+}
+
+.navbar .container {
+    width: 1170px;
+}
+
+header .navbar-inner {
+    background: transparent;
+    border: 0 none;
+}
+
+header{
+    background: #212121;
+}
+
+h1.logo {
+    background: url('/resources/img/logo.png') left top no-repeat;
+    width: 210px;
+    height: 70px;
+    text-indent: -9999px;
+}
+
+.navbar .nav > li > a {
+    color: #fff;
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+    color: #777;
+}
+
+.navbar .nav > li > .dropdown {
+    color: #FFFFFF;
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.navbar .nav > li > .dropdown > a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.dropdown.accaunt-panel .dropdown-menu {
+    background-clip: padding-box;
+    background-color: #2c2d31;
+    border: 1px solid #1c1d22;
+    border-radius: 0px;
+    box-shadow: none;
+    float: left;
+    left: auto;
+    right: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1000;
+}
+
+.alert:empty {
+    display: none;
+}
+
+.dropdown.accaunt-panel.open {
+    background: #28292c;
+}
+
+.accaunt-panel .accaunt-foto img {
+    border: 2px solid #FFFFFF;
+    max-width: 100%;
+}
+
+.accaunt-panel .accaunt-foto {
+    width: 200px;
+}
+
+.accaunt-panel .accaunt-controls {
+    width: 210px;
+}
+
+.accaunts-controls-wrap {
+    width: 415px;
+}
+
+.accaunt-panel .accaunt-controls ul {
+    list-style: none;
+}
+
+.accaunt-panel .accaunt-controls ul a {
+    color: #FFFFFF;
+    display: block;
+    padding: 5px;
+}
+
+.accaunt-panel .accaunt-controls ul a:hover {
+    text-decoration: none;
+    background: #28292c;
+}
+
+.open > .dropdown-menu form {
+    display: block;
+    width: 215px;
+}
+
+.open > .dropdown-menu input {
+    width: 100%;
+}
+
+.datepicker table {
+    background: #fff;
+}
+
+.user-avatar {
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    width: 400px;
+}
+
+.avatar-modal p {
+    text-align: center;
+}
+
+.upload-button {
+    position: relative;
+}
+
+.upload-button input[type="file"] {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#editModalImage {
+    max-width: 700px;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+}
+
+#editModal .modal-dialog {
+    margin: 30px auto;
+    width: 750px;
+}
+
+
+

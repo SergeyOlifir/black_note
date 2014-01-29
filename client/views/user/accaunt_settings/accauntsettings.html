@@ -1,0 +1,145 @@
+<template name="accauntSettings">
+    <div class="well">
+        {{#with currentUser}}
+            {{> avatarForm }}
+            {{> userAccauntForm}} 
+        {{/with}}
+    </div>
+</template>
+
+<template name="avatarForm">
+    <form>
+        {{> avatarModal}}
+        {{> editAvatarModal}}
+        <fieldset>
+            <legend>
+                Аватар
+            </legend>
+            <div class="form-group">
+                <a href="#" data-toggle="modal" data-target="#myModal"> 
+                    <img  src="{{userAvatar}}" class="user-avatar" />
+                </a>
+            </div>
+            
+        </fieldset>
+    </form>
+</template>
+
+<template name="avatarModal">
+    <div class="modal avatar-modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Аватар</h4>
+                </div>
+                <div class="modal-body">
+                    <p><img  src="{{userAvatar}}" class="user-avatar" /></p>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a type="button" class="btn btn-primary upload-button">Загрузить<input name="username" type="file" class="form-control"></a>
+                        <button type="button" class="btn btn-primary">Изменить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+
+</template>
+
+<template name="editAvatarModal">
+    <div class="modal avatar-modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Аватар</h4>
+                </div>
+                <div class="modal-body">
+                    <p><img id="editModalImage"  src="" class="user-avatar" /></p>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button id="apply" type="button" class="btn btn-primary">Применить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+
+</template>
+
+<template name="userAccauntForm">
+    <form>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <div class="form-group">
+                <label for="InputLogin">Имя при регистрации</label>
+                <input name="username" type="text" class="form-control" id="InputLogin" placeholder="Enter email" value="{{profile.name}}">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <p class="form-control-static">{{email}}</p>
+            </div>
+
+            <div class="form-group">
+                <label>Ваш пол</label>
+                <div class="clearfix">
+                    <label class="checkbox-inline">
+                        <input name="usersex" {{#if isMale}} checked="true" {{/if}} type="radio" id="inlineCheckbox1" value="male"> Мужской
+                    </label>
+                    <label class="checkbox-inline">
+                        <input name="usersex" {{#if isFemale}} checked="true" {{/if}} type="radio" id="inlineCheckbox2" value="female"> Женский
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Дата рождения</label>
+                <div class="row">
+                    <div class=" date col-md-4 span2">
+                        <input class="form-control" name="userage" value="{{userBirthDate}}" type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Месторасположение</label>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" name="country"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" name="region"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select class="form-control" name="sity"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>О себе</label>
+                <textarea name="abaut" class="form-control" rows="5">{{profile.abaut}}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Интересы, вид деятельности</label>
+                <input name="job" type="text" class="form-control" id="InputLogin" value="{{profile.job}}" placeholder="Ваш вариант">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default btn-lg" type="submit">Сохранить</button>
+            </div>
+        </fieldset>
+        
+    </form>
+</template>

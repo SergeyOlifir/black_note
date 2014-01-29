@@ -1,0 +1,17 @@
+<template name="accauntPanel">
+    <div class="clearfix accaunts-controls-wrap">
+        <div class="pull-left accaunt-foto">
+            <img src="{{userAvatar}}" />
+        </div>
+        <div class="pull-right accaunt-controls">
+            <ul>
+                <li><a href="/" >Сообщения</a></li>
+                <li><a href="{{pathFor 'createPosts'}}" >Добавить пост</a></li>
+                <li><a href="/" >Опубликованные посты</a></li>
+                <li><a href="{{pathFor 'draftPosts'}}" >Черновики</a></li>
+                <li><a href="{{pathFor 'userAccauntSettings'}}" >Настройки</a></li>
+                <li><a id="logout" href="/" >Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</template>

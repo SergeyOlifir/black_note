@@ -1,0 +1,70 @@
+<template name="authPopUp">
+    <div class="dropdown accaunt-panel">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {{#if currentUser}}
+                {{userName}}
+            {{else}}
+                Вход / Регистрация
+            {{/if}}
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">{{> popupInner}}</div>
+    </div>
+</template>
+
+<template name="loginPopUp">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <input name="email" type="email" placeholder="Логин">
+            </div>
+            <div class="form-group">
+                <input name="password" type="password" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+                <div class="alert alert-error">{{errorMessages}}</div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Bход</button>
+                <a id="registration" class="btn btn-default">Регистрация</a>
+            </div>
+        </fieldset>
+    </form>
+</template>
+
+<template name="registrPopUp">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <input name="login" type="text" placeholder="Логин">
+            </div>
+            <div class="form-group">
+                <input name="email" type="email" placeholder="Почта">
+            </div>
+            <div class="form-group">
+                <input name="password" type="password" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+                <input name="confirm_password" type="password" placeholder="Пароль">
+            </div>
+            <div class="form-group">
+                <div class="alert alert-error">{{errorMessages}}</div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Регистрация</button>
+                <a id="login" class="btn btn-default">Bход</a>
+            </div>
+        </fieldset>
+    </form>
+</template>
+
+<template name="popupInner">
+    {{#if currentUser}}
+        {{> accauntPanel}}
+    {{else}}
+        {{#if showRegistrationPopUp}}
+            {{> registrPopUp}}
+        {{else}}
+            {{> loginPopUp}}
+        {{/if}}
+    {{/if}}
+</template>

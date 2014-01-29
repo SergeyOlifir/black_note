@@ -1,0 +1,24 @@
+<template name="userPostView">
+    {{#with currentPost}}
+        {{> userPostViewDetail}} 
+    {{/with}}
+</template>
+
+<template name="userPostViewDetail">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{title}}<span class="label label-default">{{updated}}</span></h3>
+        </div>
+        <div class="panel-body">
+            {{{message}}}
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="well well-sm pull-left"><span class="pull-left">Создан: {{createDate}}</span></div>
+            <div class="btn-group pull-right">
+                <a class="btn btn-default" href="{{pathFor 'editPost'}}">Редактировать</a>
+                <a class="btn btn-default" href="#">Опубликовать</a>
+                <a class="btn btn-danger" id="del" href="{{pathFor 'deletePost'}}">Удалить</a></li>
+            </div>
+        </div>
+    </div>
+</template>

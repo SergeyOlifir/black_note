@@ -1,0 +1,16 @@
+<template name="publiclayout">
+    <header>
+        <div class="container">
+            <h1 class="logo pull-left">Black Note</h1>
+        </div>
+        <nav  class="navbar navbar-default" role="navigation">
+            {{> mainMenu}}
+        </nav>
+    </header>
+    <div class="container">
+        {{> messages}}
+        <div id="main" class="row-fluid">
+            {{yield}}
+        </div>
+    </div>
+</template>

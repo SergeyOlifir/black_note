@@ -1,0 +1,25 @@
+<template name="draftItem"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{title}}<span class="label label-default">{{updated}}</span></h3>
+        </div>
+        <div class="panel-body">
+            {{{text}}}
+        </div>
+        <div class="panel-footer clearfix">
+            <span class="pull-left">Создан: {{createDate}}</span>
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Действия <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{pathFor 'userViewOwnPost'}}">Подробнее</a></li>
+                    <li><a href="{{pathFor 'editPost'}}">Редактировать</a></li>
+                    <li><a href="#">Опубликовать</a></li>
+                    <li class="divider"></li>
+                    <li><a id="del" href="{{pathFor 'deletePost'}}">Удалить</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

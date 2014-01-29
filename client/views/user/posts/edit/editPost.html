@@ -1,0 +1,23 @@
+<template name="editPost">
+    {{#with post}}
+        <form class="main">
+            <div class="control-group">
+                <h2 class="control-label" for="title">Заголовок поста</h2> 
+                <div class="controls">
+                    <input name="title" type="text" value="{{title}}" placeholder="Name your post"/> 
+                </div>
+            </div>
+            <div class="control-group">
+                <h2 class="control-label" >Текст сообщения</h2> 
+                <div class="controls">
+                    <textarea name="message" type="text" >{{{message}}}</textarea> 
+                </div>
+            </div>
+            <div class="control-group"> 
+                <div class="controls">
+                    <input type="submit" value="Сохранить в черновики" class="btn btn-primary" control-action="save"/> 
+                </div>
+            </div> 
+        </form>
+    {{/with}}
+</template>
