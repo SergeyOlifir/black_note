@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/juise_man/project/black_note/client/stylesheets/style.css</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/accaunt_settings/accauntsettings.js</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/accaunt_settings/accauntsettings.html</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/main_user_layout/accaunt_panel.js</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/main_user_layout/accaunt_panel.html</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/main_user_layout/auth_pop_up.html</file>
+            <file>file:/Users/juise_man/project/black_note/client/helpers/router.js</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/posts/create/post_submit.html</file>
+            <file>file:/Users/juise_man/project/black_note/client/views/user/posts/edit/editPost.html</file>
+        </group>
     </open-files>
 </project-private>

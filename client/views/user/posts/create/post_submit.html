@@ -1,0 +1,115 @@
+<template name="postSubmit">
+    <div class="well">
+        <form class="">
+            <fieldset>
+                <h2>Жалобы, благодарности и т.д.</h2>
+                <div class="form-group">
+                    <label for="InputLogin">Тип сообщения</label>
+                    <select name="postType" class="form-control" id="postType">{{{postsTypes}}}</select>
+                    <p class="help-block">Выбирите тип сообщения из списка</p>
+                </div>
+                <div class="form-group">
+                    <label for="InputLogin">На кого адресовано сообщение</label>
+                    <select name="postResipientType" class="form-control" id="postResipientType">{{{postResipientTypes}}}</select>
+                    <p class="help-block">Выбирите из списка</p>
+                </div>
+                <div class="form-group">
+                    <label for="InputLogin">Сфера деятельности</label>
+                    <select name="sfera" class="form-control" id="sfera"></select>
+                    <p class="help-block">Выбирите из списка</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Месторасположение</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select class="form-control" name="country"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select class="form-control" name="region"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select class="form-control" name="sity"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Название организации</label>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <select class="form-control" name="organization" id="organization"></select>
+                                <p class="help-block">Выбирите из списка</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <a class="btn btn-info btn-lg">Добавить организацию</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Филиал</label>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <select class="form-control" name="filia" id="organization"></select>
+                                <p class="help-block">Выбирите из списка</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <a class="btn btn-info btn-lg">Добавить филиал</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Адресс организации</label>
+                    <input name="adress" id="adress" class="form-control" type="text" value="" placeholder="Адресс организации"/> 
+                </div>
+                
+                <div class="form-group">
+                    <label>Контактная информация</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="phone" id="phone" class="form-control" type="text" value="" placeholder="Контактный телефон"/>
+                                <p class="help-block">Телефон организации</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="fio" id="fio" class="form-control" type="text" value="" placeholder="Ф.И.О."/>
+                                <p class="help-block">Ф.И.О руководителя</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label>Заголовок</label>
+                    <input name="title" id="title" class="form-control" type="text" value="" placeholder="Ф.И.О."/>
+                </div>
+                
+                <div class="form-group">
+                    <label>Текст</label>
+                    <textarea name="message" id="message"></textarea> 
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default btn-lg" type="submit">Сохранить</button>
+                </div>
+            </fieldset>    
+        </form>
+    </div>
+</template>

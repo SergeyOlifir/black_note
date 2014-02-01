@@ -15,6 +15,25 @@ Template.postSubmit.events({
     }
 });
 
+Template.postSubmit.helpers({
+    postsTypes: function() {
+        var options = '<option disabled>Тип сообщения</option>';
+        for(var i in PostTypes) {
+            options += '<option value="' + i + '">' + PostTypes[i].title + '</option>';
+        }
+        
+        return options;
+    },
+    postResipientTypes: function() {
+        var options = '<option disabled>Адресат</option>';
+        for(var i in PostResipientTypes) {
+            options += '<option value="' + i + '">' + PostResipientTypes[i].title + '</option>';
+        }
+        
+        return options;
+    }
+});
+
 
 Template.postSubmit.rendered = function(){
     tinymce.init({

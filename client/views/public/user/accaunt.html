@@ -7,5 +7,33 @@
 </template>
 
 <template name="userAccaunt">
-    
+    <div class="clearfix">
+        <div class="pull-left public-avatar-wrap">
+            {{#if currentUser.profile.avatar}}
+                <img src="{{currentUser.profile.avatar}}" />
+            {{else}}
+                <img src="/img/foto/no_foto.jpg" />
+            {{/if}}
+        </div>
+        <div class="pull-left public-information-wrap">
+            {{#if currentUser.profile.name}}
+                <h3>{{currentUser.profile.name}}</h3>
+            {{/if}}
+            {{#if currentUser.profile.age}}
+                <h4> Дата рождения: {{userBirthDate}}</h4>
+            {{/if}}
+        </div>
+        
+    </div>
+    <section>
+        {{#if currentUser.profile.job}}
+            <h3>Интересы, вид деятельности</h3>
+            <p>{{currentUser.profile.job}}</p>
+        {{/if}}
+        
+        {{#if currentUser.profile.abaut}}
+            <h3>О пользователе</h3>
+            <p>{{currentUser.profile.abaut}}</p>
+        {{/if}}
+    </section>
 </template>
